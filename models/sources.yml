@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw_layer
+    database: airbnb
+    schema: raw
+    tables:
+      - name: listings
+        identifier: raw_listings
+
+      - name: hosts
+        identifier: raw_hosts
+
+      - name: reviews
+        identifier: raw_reviews
+
+  - name: dim_layer
+    database: airbnb
+    schema: dbt_dev
+    tables:
+      - name: dim_hosts
+        identifier: dim_hosts_cleansed
+      - name: dim_hosts_type1
+        identifier: dim_hosts_cleansed_type1_scd
+      - name: dim_hosts_type2
+        identifier: TYPE2SCD_SNAPSHOT
+  
+    
