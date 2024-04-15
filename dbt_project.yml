@@ -38,8 +38,7 @@ models:
     # Applies to all files under models/example/
     +materialized: view
     src:
-      +materialized: ephemeral
-    dim:
       +materialized: view
-    fct:
+    dim:
       +materialized: table
+ 

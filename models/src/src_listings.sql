@@ -1,5 +1,5 @@
 WITH raw_listings AS (  
- SELECT  * FROM {{source('airbnb','listings')}}
+ SELECT  * FROM {{source('raw_layer','listings')}}
 )
 SELECT
  id AS listing_id, -- new alias name
